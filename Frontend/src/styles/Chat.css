@@ -361,13 +361,15 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .chats {
-    padding: 1rem;
+    padding: 0.75rem;
     gap: 1.5rem;
   }
   
   .message-bubble {
-    max-width: 90%;
-    padding: 1rem;
+    max-width: 85%;
+    padding: 0.875rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
   
   .welcome-message h1 {
@@ -390,23 +392,147 @@
   .message-container {
     gap: 0.75rem;
   }
+  
+  /* Mobile-specific chat message styling */
+  .chat-message {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .chat-message p {
+    margin: 0.75rem 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .chat-message h1, .chat-message h2, .chat-message h3, 
+  .chat-message h4, .chat-message h5, .chat-message h6 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.75rem 0;
+    line-height: 1.4;
+  }
+  
+  .chat-message code {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+    word-break: break-all;
+  }
+  
+  .chat-message pre {
+    padding: 0.875rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+  
+  .chat-message pre code {
+    font-size: 0.8rem;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-wrap: normal;
+  }
+  
+  .chat-message ul, .chat-message ol {
+    margin: 0.875rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .chat-message li {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .chat-message blockquote {
+    padding: 0.875rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .chat-message table {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+  }
+  
+  .chat-message th, .chat-message td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Prose styling for mobile */
+  .prose {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .prose h1, .prose h2, .prose h3, 
+  .prose h4, .prose h5, .prose h6 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.75rem 0;
+    line-height: 1.4;
+  }
+  
+  .prose p {
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .prose code {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  .prose pre {
+    padding: 0.875rem;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    overflow-x: auto;
+  }
+  
+  .prose pre code {
+    font-size: 0.8rem;
+  }
+  
+  .prose ul, .prose ol {
+    margin: 0.875rem 0;
+    padding-left: 1.5rem;
+  }
+  
+  .prose li {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .prose blockquote {
+    padding: 0.875rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .prose table {
+    font-size: 0.8rem;
+  }
+  
+  .prose th, .prose td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
   .chats {
-    padding: 0.75rem;
+    padding: 0.5rem;
     gap: 1rem;
   }
   
   .message-bubble {
-    max-width: 95%;
-    padding: 1rem;
-  }
-  
-  .chat-message pre {
-    padding: 1rem;
-    font-size: 0.75rem;
-    overflow-x: auto;
+    max-width: 92%;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
   
   .welcome-message h1 {
@@ -424,5 +550,117 @@
   
   .chat-pair {
     margin-bottom: 1rem;
+  }
+  
+  /* Extra small mobile styling */
+  .chat-message {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  .chat-message p {
+    margin: 0.6rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .chat-message h1, .chat-message h2, .chat-message h3, 
+  .chat-message h4, .chat-message h5, .chat-message h6 {
+    font-size: 1rem;
+    margin: 0.875rem 0 0.6rem 0;
+  }
+  
+  .chat-message code {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.3rem;
+  }
+  
+  .chat-message pre {
+    padding: 0.75rem;
+    margin: 0.875rem 0;
+    font-size: 0.75rem;
+    overflow-x: auto;
+  }
+  
+  .chat-message pre code {
+    font-size: 0.75rem;
+  }
+  
+  .chat-message ul, .chat-message ol {
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+  }
+  
+  .chat-message li {
+    margin: 0.3rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .chat-message blockquote {
+    padding: 0.75rem;
+    margin: 0.875rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .chat-message table {
+    font-size: 0.75rem;
+  }
+  
+  .chat-message th, .chat-message td {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Prose styling for extra small mobile */
+  .prose {
+    font-size: 0.85rem;
+  }
+  
+  .prose h1, .prose h2, .prose h3, 
+  .prose h4, .prose h5, .prose h6 {
+    font-size: 1rem;
+    margin: 0.875rem 0 0.6rem 0;
+  }
+  
+  .prose p {
+    margin: 0.6rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .prose code {
+    font-size: 0.75rem;
+  }
+  
+  .prose pre {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .prose pre code {
+    font-size: 0.75rem;
+  }
+  
+  .prose ul, .prose ol {
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+  }
+  
+  .prose li {
+    margin: 0.3rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .prose blockquote {
+    padding: 0.75rem;
+    margin: 0.875rem 0;
+    font-size: 0.875rem;
+  }
+  
+  .prose table {
+    font-size: 0.75rem;
+  }
+  
+  .prose th, .prose td {
+    padding: 0.4rem;
+    font-size: 0.75rem;
   }
 }
