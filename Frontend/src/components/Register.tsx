@@ -33,7 +33,7 @@ function Register({setisAuthenticated}) {
 
     try {
       // Simulate API call for now
-      const response = await fetch("/api/register", {
+      const response = await fetch("https://chatbot-backend-t13q.onrender.com/api/register", {
           method: 'POST',
           headers: {
           'Content-Type': 'application/json',
