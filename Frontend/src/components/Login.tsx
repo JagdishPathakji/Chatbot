@@ -62,7 +62,7 @@ function Login({ setisAuthenticated }) {
                     <div className="auth-header">
                         <div className="auth-logo">
                             <Bot size={32} />
-                            <h1>SigmaGPT</h1>
+                            <h1>QueryAI</h1>
                         </div>
                         <h2>Welcome Back</h2>
                         <p>Sign in to continue your AI conversations</p>
