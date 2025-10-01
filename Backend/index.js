@@ -111,12 +111,19 @@ app.post("/api/login", async (req,res)=> {
         
         if(isLoggedIn.success) {
             // Generate JWT Token
-            const token = jwt.sign({email: body.email},process.env.SECRET_KEY,{expiresIn:"1d"})
-            res.cookie("token",token,  {
-                httpOnly: true,   // ✅ not accessible by JS
-                secure: false,    // true in production (HTTPS)
-                sameSite: "lax"   // CSRF protection
-            })
+           const token = jwt.sign(
+              { email: body.email },
+              process.env.SECRET_KEY,
+              { expiresIn: "1d" }
+            );
+            
+            res.cookie("token", token, {
+              httpOnly: true,            // not accessible by JS
+              secure: false,             // true in production (HTTPS)
+              sameSite: "lax",           // CSRF protection
+              maxAge: 24 * 60 * 60 * 1000  // 1 day in milliseconds
+            });
+
             
             // Login the user
             res.status(200).send({"reply":"Login Successfull","status":true})
