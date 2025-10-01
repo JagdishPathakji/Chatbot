@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     async function verifyToken() {
       try {
-        const res = await fetch("/api/verifytoken", {
+        const res = await fetch("https://chatbot-backend-t13q.onrender.com/api/verifytoken", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
