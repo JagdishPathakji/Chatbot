@@ -71,10 +71,10 @@ function Register({setisAuthenticated}) {
           <div className="auth-header">
             <div className="auth-logo">
               <Bot size={32} />
-              <h1>SigmaGPT</h1>
+              <h1>QueryAI</h1>
             </div>
             <h2>Create Account</h2>
-            <p>Join SigmaGPT and start your AI journey</p>
+            <p>Join QueryAI and start your AI journey</p>
           </div>
 
           <form onSubmit={handleSubmit} className="auth-form">
