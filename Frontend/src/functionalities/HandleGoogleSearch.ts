@@ -1,6 +1,6 @@
 const HandleGoogleSearch = async (prompt: string) => {
   try {
-    const response = await fetch('/api/googlesearch', {
+    const response = await fetch('https://chatbot-backend-t13q.onrender.com/api/googlesearch', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
