@@ -15,7 +15,7 @@ import usercollection from "./Database/userSchema.js"
 
 
 const app = express()
-const allowedOrigin = "http://localhost:5173";
+const allowedOrigin = "https://chatbot-frontend-9o1s.onrender.com";
 const port = process.env.PORT || 4000
 
 app.use(cors({
