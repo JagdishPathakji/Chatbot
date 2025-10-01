@@ -25,7 +25,7 @@ function Login({ setisAuthenticated }) {
         setError('');
 
         try {
-            const response = await fetch("/api/login", {
+            const response = await fetch("https://chatbot-backend-t13q.onrender.com/api/login", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
