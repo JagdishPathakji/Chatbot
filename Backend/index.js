@@ -118,12 +118,11 @@ app.post("/api/login", async (req,res)=> {
             );
             
             res.cookie("token", token, {
-              httpOnly: true,            // not accessible by JS
-              secure: false,             // true in production (HTTPS)
-              sameSite: "lax",           // CSRF protection
-              maxAge: 24 * 60 * 60 * 1000  // 1 day in milliseconds
+                httpOnly: true,          // Not accessible via JS
+                secure: true,            // ✅ Required for HTTPS
+                sameSite: "none",        // ✅ Allow cross-origin
+                maxAge: 24 * 60 * 60 * 1000 // 1 day in milliseconds
             });
-
             
             // Login the user
             res.status(200).send({"reply":"Login Successfull","status":true})
