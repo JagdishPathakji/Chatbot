@@ -177,6 +177,7 @@
   padding: 1.5rem;
   margin: 1.5rem 0;
   overflow-x: auto;
+  max-width: 100%;
   position: relative;
 }
 
@@ -187,6 +188,9 @@
   border: none;
   font-size: 0.875rem;
   line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .chat-message ul,
@@ -305,6 +309,7 @@
   padding: 1.5rem;
   margin: 1.5rem 0;
   overflow-x: auto;
+  max-width: 100%;
 }
 
 .prose pre code {
@@ -313,6 +318,9 @@
   padding: 0;
   border: none;
   font-size: 0.875rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .prose ul, .prose ol {
@@ -422,7 +430,7 @@
     padding: 0.875rem;
     margin: 1rem 0;
     border-radius: 8px;
-    overflow-x: auto;
+    overflow-x: hidden;
     font-size: 0.8rem;
     line-height: 1.4;
     max-width: 100%;
@@ -430,9 +438,10 @@
   
   .chat-message pre code {
     font-size: 0.8rem;
-    white-space: pre;
-    word-wrap: normal;
-    overflow-wrap: normal;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .chat-message ul, .chat-message ol {
@@ -489,11 +498,15 @@
     padding: 0.875rem;
     margin: 1rem 0;
     font-size: 0.8rem;
-    overflow-x: auto;
+    overflow-x: hidden;
+    max-width: 100%;
   }
   
   .prose pre code {
     font-size: 0.8rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .prose ul, .prose ol {
@@ -578,11 +591,15 @@
     padding: 0.75rem;
     margin: 0.875rem 0;
     font-size: 0.75rem;
-    overflow-x: auto;
+    overflow-x: hidden;
+    max-width: 100%;
   }
   
   .chat-message pre code {
     font-size: 0.75rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .chat-message ul, .chat-message ol {
@@ -633,10 +650,15 @@
   .prose pre {
     padding: 0.75rem;
     font-size: 0.75rem;
+    overflow-x: hidden;
+    max-width: 100%;
   }
   
   .prose pre code {
     font-size: 0.75rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .prose ul, .prose ol {
