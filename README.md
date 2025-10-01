@@ -32,3 +32,5 @@ A **fullstack chatbot application** leveraging Large Language Models (LLMs) with
 | Authentication  | JWT / Cookies               
 | AI / LLM        | Google Gemini / Langsearch 
 | Utilities       | Axios, DOMPurify, Highlight.js, Marked 
+
+Live Demo: https://chatbot-frontend-9o1s.onrender.com/chat
