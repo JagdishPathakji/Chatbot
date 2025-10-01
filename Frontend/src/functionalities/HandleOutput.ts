@@ -3,7 +3,7 @@ const HandleOutput = async (response: any) => {
     
     // If it's a device access prompt, call the deviceaccess endpoint
     if (response.deviceaccessprompt === true) {
-      const deviceResponse = await fetch('/api/deviceaccess', {
+      const deviceResponse = await fetch('https://chatbot-backend-t13q.onrender.com/api/deviceaccess', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
