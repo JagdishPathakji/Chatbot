@@ -1,6 +1,6 @@
 const HandleSubmit = async (prompt: string) => {
   try {
-    const response = await fetch('/api/chat', {
+    const response = await fetch('https://chatbot-backend-t13q.onrender.com/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
