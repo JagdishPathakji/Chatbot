@@ -1,5 +1,5 @@
 export default async function HandleLogout(email: string) {
-  const response = await fetch("/api/logout", {
+  const response = await fetch("https://chatbot-backend-t13q.onrender.com/api/logout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email: email }),
