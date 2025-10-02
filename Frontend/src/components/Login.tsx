@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, Bot, ArrowRight } from 'lucide-react';
 import '../styles/Auth.css';
 
-function Login({ setisAuthenticated }) {
+function Login({ setIsAuthenticated }) {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -37,7 +37,7 @@ function Login({ setisAuthenticated }) {
             const ans = await response.json()
             if (ans.status === true) {
                 localStorage.setItem("email",formData.email)
-                setisAuthenticated(true)
+                setIsAuthenticated(true)
                 navigate('/chat');
             }
             else {
