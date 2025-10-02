@@ -63,7 +63,7 @@ function App() {
               ? (
                 <div className='app'>
                   {/* <Sidebar /> */}
-                  <ChatWindow />
+                  <ChatWindow setisAuthenticated={setIsAuthenticated}/>
                 </div>
               )
               : <Navigate to="/login" replace />}
