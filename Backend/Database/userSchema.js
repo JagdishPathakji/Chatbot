@@ -13,7 +13,7 @@ const userSchema = Schema({
     },
     gender: {
         type: String,
-        enum: ["male","female","others"]
+        enum: ["male","female","others","prefer-not-to-say"]
     },
     email: {
         type: String,
