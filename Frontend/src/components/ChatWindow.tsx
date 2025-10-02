@@ -7,10 +7,9 @@ import HandleOutput from '../functionalities/HandleOutput.ts'
 import GenerateImg from '../functionalities/GenerateImg.ts'
 import HandleGoogleSearch from '../functionalities/HandleGoogleSearch.ts'
 // import saveToDB from '../functionalities/saveToDB.ts'
-import { LogOut } from "lucide-react";
-import HandleLogout from './Logout.tsx'
+import LogoutButton from './Logout.tsx'
 
-function ChatWindow() {
+function ChatWindow({setisAuthenticated}) {
     const [userPrompt, setuserPrompt] = useState<string[]>([]);
     const [chatsummary, setchatsummary] = useState<string[]>([]);
     const [chats, setchats] = useState<any[]>([])
@@ -90,10 +89,7 @@ function ChatWindow() {
                 <div className="navbar-title">
                     <span>QueryAI</span>
                 </div>
-                <div className="userIconDiv" onClick={()=>{HandleLogout(userEmail)}}>
-                    <LogOut className="w-5 h-5" style={{cursor:"pointer"}}/>
-                    Logout
-                </div>
+                <LogoutButton email={userEmail} setIsAuthenticated={setisAuthenticated}/>
             </div>
             
             <Chat chats={chats} userPrompt={userPrompt} isLoading={isLoading} />
