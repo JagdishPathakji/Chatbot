@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Eye, EyeOff, Bot, ArrowRight, Calendar } from 'lucide-react';
 import '../styles/Auth.css';
 
-function Register({setisAuthenticated}) {
+function Register({setIsAuthenticated}) {
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -45,7 +45,7 @@ function Register({setisAuthenticated}) {
       const ans = await response.json()
       if(ans.status === true) {
         localStorage.setItem("email",formData.email)
-        setisAuthenticated(true)
+        setIsAuthenticated(true)
         navigate('/login');
       }
       else {
