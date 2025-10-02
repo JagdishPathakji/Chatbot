@@ -1,26 +1,35 @@
 import { useNavigate } from "react-router-dom";
+import { LogOut } from "lucide-react";
 
-function LogoutButton({ email }) {
+export default function LogoutButton({ email, setIsAuthenticated }) {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
-    const response = await fetch("https://chatbot-backend-t13q.onrender.com/api/logout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-      credentials: "include",
-    });
+    try {
+      const response = await fetch("/api/logout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+        credentials: "include",
+      });
+      const res = await response.json();
 
-    const res = await response.json();
-    if (res.success) {
-      alert(res.message);
-      navigate("/login"); // works safely
-    } else {
-      alert(`Logout Failed: ${res.message}`);
+      if (res.success) {
+        alert(res.message);
+        setIsAuthenticated(false); // update App auth state
+        navigate("/login");       // SPA redirect
+      } else {
+        alert(`Logout Failed: ${res.message}`);
+      }
+    } catch (err) {
+      alert("Something went wrong during logout");
     }
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return (
+    <div className="userIconDiv" onClick={handleLogout} style={{ cursor: "pointer" }}>
+      <LogOut className="w-5 h-5" />
+      Logout
+    </div>
+  );
 }
-
-export default LogoutButton;
