@@ -9,7 +9,7 @@ import HandleGoogleSearch from '../functionalities/HandleGoogleSearch.ts'
 // import saveToDB from '../functionalities/saveToDB.ts'
 import LogoutButton from './Logout.tsx'
 
-function ChatWindow({setisAuthenticated}) {
+function ChatWindow({setIsAuthenticated}) {
     const [userPrompt, setuserPrompt] = useState<string[]>([]);
     const [chatsummary, setchatsummary] = useState<string[]>([]);
     const [chats, setchats] = useState<any[]>([])
@@ -89,7 +89,7 @@ function ChatWindow({setisAuthenticated}) {
                 <div className="navbar-title">
                     <span>QueryAI</span>
                 </div>
-                <LogoutButton email={userEmail} setIsAuthenticated={setisAuthenticated}/>
+                <LogoutButton email={userEmail} setIsAuthenticated={setIsAuthenticated}/>
             </div>
             
             <Chat chats={chats} userPrompt={userPrompt} isLoading={isLoading} />
