@@ -21,8 +21,15 @@ const register = async (body)=> {
     throw new Error("User already exists, please login")
 
     // Validate password
-    if(!(validator.isStrongPassword(body.password)))
-    throw new Error("Password is Weak")
+    if(!(validator.isStrongPassword(body.password, {
+        minLength: 8,         // minimum length
+        minLowercase: 1,      // at least 1 lowercase letter
+        minUppercase: 1,      // at least 1 uppercase letter
+        minNumbers: 1,        // at least 1 number
+        minSymbols: 1,        // at least 1 special character
+    })))
+    throw new Error("Password is Weak, It must have min of 8 length, one lowercase char, one uppercase char, one special char and one number.")
+
 
     // Check if firstName length is between 3 and 20
     if(!validator.isLength(body.firstname, {min: 3, max: 20}))
