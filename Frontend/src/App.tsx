@@ -48,13 +48,13 @@ function App() {
           <Route
             path="/login"
             element={!isAuthenticated
-              ? <Login setisAuthenticated={setIsAuthenticated} />
+              ? <Login setIsAuthenticated={setIsAuthenticated} />
               : <Navigate to="/chat" replace />}
           />
           <Route
             path="/register"
             element={!isAuthenticated
-              ? <Register setisAuthenticated={setIsAuthenticated} />
+              ? <Register setIsAuthenticated={setIsAuthenticated} />
               : <Navigate to="/chat" replace />}
           />
           <Route
@@ -63,7 +63,7 @@ function App() {
               ? (
                 <div className='app'>
                   {/* <Sidebar /> */}
-                  <ChatWindow setisAuthenticated={setIsAuthenticated}/>
+                  <ChatWindow setIsAuthenticated={setIsAuthenticated}/>
                 </div>
               )
               : <Navigate to="/login" replace />}
