@@ -16,7 +16,7 @@ const HandleGoogleSearch = async (prompt: string) => {
     const data = await response.json();
     
     // Your backend sends {reply: actualResponse}
-    return data.reply;
+    return "USER QUERY : " + prompt + "\n ANSWER THIS ACCORDINGLY : " + data.reply;
   } catch (error) {
     return {
       llmanswerableprompt: true,
